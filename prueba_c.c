@@ -13,9 +13,15 @@ int main(int argc, char** argv) {
 
   srand(time(NULL));
 
+  //================
+  //  Dos vectores 
+  //================
   double* A = (double*)malloc(sizeof(double) * VEC_LEN);
   double* B = (double*)malloc(sizeof(double) * VEC_LEN);
 
+  //==============================
+  //  Llenado con números al azar
+  //==============================
   for (int i = 0; i < VEC_LEN; ++i) {
     A[i] = (double)rand() / (double)RAND_MAX;
     B[i] = (double)rand() / (double)RAND_MAX;
@@ -29,6 +35,9 @@ int main(int argc, char** argv) {
 
   clock_gettime(CLOCK_MONOTONIC_RAW, &start);
 
+  //====================
+  //  Producto escalar
+  //====================
   for (int j = 0; j < AVERAGING; ++j) {
     c = 0.0;
     a = A;
@@ -43,6 +52,9 @@ int main(int argc, char** argv) {
 
   clock_gettime(CLOCK_MONOTONIC_RAW, &end);
 
+  //===================
+  //  Limpiar memoria
+  //===================
   free(A);
   free(B);
 
