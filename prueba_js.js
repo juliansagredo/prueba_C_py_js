@@ -39,5 +39,5 @@ for (var j = 0; j < AVERAGING; ++j) {
 var elapsed = new Date().getTime() - start;
 
 console.log("c:", c);
-console.log("For loop:", elapsed / AVERAGING);
+console.log("For loop:", elapsed / AVERAGING, "ms");
 
