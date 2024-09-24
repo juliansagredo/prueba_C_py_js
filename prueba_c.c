@@ -1,4 +1,7 @@
 //============================
+// gcc -o prueba prueba_c.c
+// ./prueba
+//============================
 //  Programa de prueba en C 
 //============================
 #include <time.h>
